@@ -46,7 +46,7 @@ export const App = () => {
     }
   };
 
-  const handlerForm: FormEventHandler = event => {
+  const handlerSubmit: FormEventHandler = event => {
     event.preventDefault();
 
     let hasError = false;
@@ -84,7 +84,7 @@ export const App = () => {
     <div className="App">
       <h1>Add todo form</h1>
 
-      <form action="/api/todos" method="POST" onSubmit={handlerForm}>
+      <form action="/api/todos" method="POST" onSubmit={handlerSubmit}>
         <div className="field">
           <label htmlFor="input-Title" className="input">
             Titel:
